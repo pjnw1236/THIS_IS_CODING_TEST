@@ -1,0 +1,23 @@
+# CH11 그리디 문제
+# 01 모험가 길드
+
+# 모험가의 수 
+N = int(input())
+
+# 각 모험가의 공포도의 값
+array = list(map(int, input().split()))
+array.sort() # 오름차순으로 정렬 
+
+# 그룹의 수 
+group_count = 0
+# 각 그룹 구성원의 수
+cnt = 0
+
+# 공포도가 X인 모험가는 X명 이상으로 그룹 구성
+for i in array:
+    cnt += 1 # 그룹 구성원의 수 +1 
+    if i >= cnt:
+        group_count += 1 # 그룹의 수 +1 
+        cnt = 0
+
+print(group_count)
