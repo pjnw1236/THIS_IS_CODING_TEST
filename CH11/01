@@ -14,9 +14,11 @@ group_count = 0
 cnt = 0
 
 # 공포도가 X인 모험가는 X명 이상으로 그룹 구성
+# i : 각 구성원의 공포도 
+# cnt : 각 구성원의 수 
 for i in array:
     cnt += 1 # 그룹 구성원의 수 +1 
-    if i >= cnt:
+    if i <= cnt:
         group_count += 1 # 그룹의 수 +1 
         cnt = 0
 
