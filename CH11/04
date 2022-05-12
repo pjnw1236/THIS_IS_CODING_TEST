@@ -1,0 +1,20 @@
+# CH11 그리디 문제
+# 04 만들 수 없는 금액
+
+# N : 동전의 개수 
+N = int(input()) 
+
+# COINS : N개의 동전 리스트 / 오름차순으로 정렬
+COINS = list(map(int, input().split())) 
+COINS.sort() 
+
+target = 1
+for coin in COINS: 
+    if target >= coin:
+        target += coin 
+    # target이 coin보다 작으면, for문 종료
+    else:
+        break 
+
+# 만들 수 없는 금액 출력
+print(target) 
