@@ -1,0 +1,17 @@
+# CH12 구현 문제
+# 08 문자열 재정렬
+
+S = input() 
+
+alpha = []
+num = 0
+
+for i in S:
+    if i.isalpha() == True:
+        alpha.append(i) 
+    elif i.isdigit() == True:
+        num += int(i) 
+
+alpha.sort() 
+print(*alpha, sep="", end="") 
+print(num)
