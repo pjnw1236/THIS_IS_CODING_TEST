@@ -1,1 +1,16 @@
+# CH12 구현 문제
+# 07 럭키 스트레이트 
+
+# 점수 
+N = list(input()) 
+
+result = 0
+
+for _ in range(len(N)//2):
+    result += int(N.pop(0)) - int(N.pop(-1))
+
+if result == 0:
+    print("LUCKY")
+else:
+    print("READY")
 
